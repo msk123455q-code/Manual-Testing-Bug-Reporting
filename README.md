@@ -1,49 +1,54 @@
-# Assignment No. 3 – Bug Reporting & Release Notes
+Your Markdown file is ready
+[file-tag: code-generated-file-0-1780143078764357813]
 
-![QA Testing](https://img.shields.io/badge/Testing-Manual--QA-blue?style=for-the-badge)
-![Documentation](https://img.shields.io/badge/Artifacts-Excel%20%2F%20Markdown-green?style=for-the-badge)
+Here is the professional, fully formatted **GitHub Repository README.md** file tailored specifically to the bug report sheets and release notes you uploaded. It organizes your work into a polished, executive-ready presentation for your GitHub profile.
+
+```markdown
+# ✈️ phpTravels Online Travel Booking System — Manual Testing & Bug Report
 
 ## 📌 Project Overview
-This repository contains the deliverables for **Assignment No. 3 - Bug Reporting**. The objective of this project is to simulate an end-to-end manual testing verification cycle on an E-Commerce web platform, identifying critical functional and user interface (UI) defects, documenting them under industry-standard tracking schemas, and providing a final release readiness report.
+This repository contains the comprehensive QA manual testing deliverables for **Assignment No. 3**. The focus of this project was an end-to-end exploratory and functional testing of the **phpTravels Online Travel Booking System** (`phptravels.net/demo`), identifying core functional flaws, visual regressions, UI/UX issues, and critical edge-case bypasses.
 
-### 📁 Deliverables Included
-* **[Click Here to Download Full Excel Sheet](./BugReport_ShahidKhan_Assignment%20.xlsx)** * **Tab 1:** Bug Report Log
-* **Tab 2:** Release Notes / Executive Summary
+A total of **24 unique, high-impact bugs** were discovered, documented, and 100% verified via live page access across desktop and mobile-responsive layouts.
 
 ---
 
-## 🐛 Bug Report Log
-
-Below is the structured registry of defects uncovered during the manual exploratory testing cycle.
-
-| Bug ID | Title / Summary | Environment | Severity | Steps to Reproduce | Expected Result | Actual Result |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BUG-001** | Cart item count displays a negative number when removing items below zero | Windows 11, Google Chrome (Latest Version) | 🔴 Critical | 1. Navigate to the online product page.<br>2. Click "Add to Cart" on any product.<br>3. Go to the Shopping Cart page.<br>4. Rapidly click the "Remove / Minus (-)" icon multiple times. | The item count should stop at 0, and the item should be removed completely from the cart view. | The cart updates to display a quantity of "-3 Items", and the total price reflects a negative balance. |
-| **BUG-002** | "Proceed to Checkout" button overlaps footer navigation links on smaller screens | Windows 11, Edge Browser (Window resized to 1024x768 resolution) | 🔵 Minor | 1. Add any item to the shopping cart.<br>2. Navigate to the Cart Summary page.<br>3. Resize the desktop browser window horizontally to a narrower width.<br>4. Scroll down to the bottom of the cart summary panel. | The "Proceed to Checkout" button should dynamically adjust its positioning or wrap cleanly within the viewport layout. | The button slides down and overlaps directly on top of the "Privacy Policy" link in the footer, obscuring text and making both unclickable. |
-| **BUG-003** | Registration form accepts numbers and special characters in First Name field | macOS, Safari Browser | 🟡 Major | 1. Click on the "Sign Up / Register" icon in the header.<br>2. In the "First Name" input field, type `John123!@#`.<br>3. Fill out the remaining fields with valid test data.<br>4. Click the "Submit Registration" button. | An inline validation error should appear under the field stating: "First name can only contain alphabetical characters." | The form successfully submits, creates the profile, and prints "Welcome, John123!@#" on the dashboard header. |
-| **BUG-004** | Broken placeholder image icon displayed for featured items section on home screen | Windows 11, Google Chrome (Latest Version) | 🔵 Minor | 1. Open the homepage of the web application.<br>2. Scroll down past the main banner to the "New Arrivals" carousel block.<br>3. Observe the product thumbnails. | Every product card should load a high-resolution marketing picture of the item. | The third product card ("Classic Leather Wallet") fails to fetch the media file and displays a broken image icon. |
-| **BUG-005** | Promo code entry field crashes the page when entering strings longer than 50 characters | Windows 11, Firefox Browser | 🟡 Major | 1. Add an item to the cart and proceed to the checkout screen.<br>2. Locate the "Apply Promo Code" field box.<br>3. Copy and paste a random alphanumeric string of 100 characters into the box.<br>4. Click the "Apply" button. | The UI displays a warning message: "Invalid code sequence format or code too long." | The entire browser page turns blank, throws an uncaught JavaScript reference error in the console, and forces the user to reload the tab. |
+## 🧑‍💻 Tester & Session Information
+* **Tester Name:** Shahid Khan
+* **Course / Batch:** Cohort 9 : QA (Manual + Automation)
+* **Project Name:** phpTravels Online Travel Booking System
+* **Test Date:** May 30, 2026
+* **Test Environment:** Chrome 124 / Windows 11 & Mobile Responsive (via Chrome DevTools)
+* **Tools Used:** Manual Testing — Browser: Google Chrome, Mozilla Firefox, Mobile Responsive Viewports
 
 ---
 
-## 📋 Release Notes - Alpha Testing Cycle v1.0.3
+## 📊 Executive Defect Metric Dashboard
 
-### 1. Summary of Activities
-A comprehensive manual validation cycle was performed targeting the core end-to-end customer workflows of the web storefront platform. Testing efforts focused heavily on: Account Creation, Product Visualization, Cart Adjustment Engine, and Checkout Form Handling.
-
-### 2. Metrics Breakdown
-* **Total Quality Defects Identified:** 5
-* **🔴 Critical Severity Bugs:** 1 *(System logic failure)*
-* **🟡 Major Severity Bugs:** 2 *(Validation & Crash risks)*
-* **🔵 Minor Severity Bugs:** 2 *(Visual alignment issues)*
-
-### 3. Known Blockers & Regressions (Exclusions for Deployment)
-* **`[BUG-001]`** The shopping cart allows mathematical underflow logic resulting in negative items and negative balances. This requires immediate re-architecture of the item counting script before moving to production.
-* **`[BUG-005]`** Uncapped input parameters inside the coupon voucher input field allow character strings to throw a fatal application stack error, wiping out the active user state.
+| Severity | Defect Count | Representative Bug IDs & Descriptions |
+| :---: | :---: | :--- |
+| <kbd>🔴 **Critical**</kbd> | **2** | **BUG-003**: Currency mismatch at checkout<br>**BUG-022**: No booking reference on confirmation page |
+| <kbd>🟠 **High**</kbd> | **9** | **BUG-001**: Past date booking allowance<br>**BUG-005**: "Book Now" functional on sold-out rooms<br>**BUG-006**: Social login integration 404 error<br>**BUG-012**: Unreplaced Lorem Ipsum placeholder content<br>**BUG-013**: Gallery component crash on viewport resize<br>**BUG-019**: Total checkout price calculation mismatch<br>**BUG-021**: Email confirmation requirement bypass |
+| <kbd>🟡 **Medium**</kbd> | **9** | **BUG-004**: Result count mismatch in filter pane<br>**BUG-007**: Hotel star rating UI/data mismatch<br>**BUG-008**: Input validation failure on phone field<br>**BUG-011**: Search filters automatically resetting on pagination<br>**BUG-014**: `'undefined'` string displayed in room type label<br>**BUG-018**: Wishlist toggle state persistence failure<br>**BUG-020**: Broken review rating submission form<br>**BUG-024**: Leaflet/Google Map rendering error |
+| <kbd>🟢 **Low**</kbd> | **4** | **BUG-010**: Duplicate autocomplete entry in location input<br>**BUG-015**: Raw HTML tags exposed in tooltip description<br>**BUG-016**: Duplicate newsletter subscription acceptance<br>**BUG-017**: Broken breadcrumb navigation link trail<br>**BUG-023**: Incorrect HTML page title on checkout page |
+| **TOTAL** | **24** | **100% Verified via Live Environment Testing** |
 
 ---
 
-### 👨‍💻 Submitted By
-* **Tester Name:** Shahid Khan  
-* **Role:** QA Intern / Student Tester  
-* **Project Assignment:** Assignment No. 3 - Bug Reporting Log
+## 🛠️ Defect Lifecycle Attributes Explained
+
+The complete testing lifecycle was tracked using a detailed **Bug Report Ledger** (structured as shown in the repository files). Each defect includes:
+1. **Bug ID:** Unique sequential identifier (`BUG-001` through `BUG-024`).
+2. **Summary:** Concisely defines the defect nature, location, and condition.
+3. **Component/Module:** Isolate the fault domain (e.g., `Hotels/Booking`, `Authentication`, `Cart/Checkout`).
+4. **Steps to Reproduce (STR):** Clear, sequential atomic instructions to recreate the bug from a clean session state.
+5. **Expected vs. Actual Result:** Highlight the exact variance between business logic requirements and current system behavior.
+6. **Severity vs. Priority Matrix:** Classifies technical impact (Severity) against business urgency for fixing (Priority).
+
+---
+
+## 📁 Repository Structure
+```bash
+├── README.md               # Professional project presentation and overview
+├── BUG_REPORT_LEDGER.jpg   # Complete high-resolution spreadsheet of the 24 logged defects
+└── RELEASE_NOTES_SUMMARY.png# Executive dashboard summary including defect density metrics
