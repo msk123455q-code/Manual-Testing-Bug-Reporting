@@ -1,9 +1,3 @@
-Your Markdown file is ready
-[file-tag: code-generated-file-0-1780143078764357813]
-
-Here is the professional, fully formatted **GitHub Repository README.md** file tailored specifically to the bug report sheets and release notes you uploaded. It organizes your work into a polished, executive-ready presentation for your GitHub profile.
-
-```markdown
 # ✈️ phpTravels Online Travel Booking System — Manual Testing & Bug Report
 
 ## 📌 Project Overview
